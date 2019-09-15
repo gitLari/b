@@ -13,7 +13,15 @@
 </html>
 
 <script>
+var poissaolo = [];
 function poissa(paiva, kuu) {
-    document.getElementById("pois").innerHTML = "Olet ilmoittanut poissaolosta: " + paiva + "." + kuu;
+    var pvm = paiva + "." + kuu;
+    poissaolo.push(pvm);
+    var i;
+    var text = "";
+    for(i = 0; i<poissaolo.length; i++) {
+        text += poissaolo[i] + " ";
+    }
+    document.getElementById("pois").innerHTML = "Olet ilmoittanut poissaolosta: " + text;
 }
 </script>
